@@ -1,10 +1,10 @@
-# 🎵 Spotify Clone — MERN Stack
+#  Spotify Clone — MERN Stack
 
 A beginner-friendly full-stack music streaming app built with MongoDB, Express, React, and Node.js.
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 spotify-clone/
@@ -51,7 +51,7 @@ spotify-clone/
 
 ---
 
-## ⚡ Quick Start
+##  Quick Start
 
 ### Step 1 — Prerequisites
 
@@ -121,7 +121,7 @@ http://localhost:3000
 
 ---
 
-## 👥 User Roles & Permissions
+##  User Roles & Permissions
 
 | Feature             | Guest | User | Premium | Artist | Admin |
 |---------------------|-------|------|---------|--------|-------|
@@ -136,7 +136,7 @@ http://localhost:3000
 
 ---
 
-## 🔐 Role Routes
+##  Role Routes
 
 | Role    | Route     |
 |---------|-----------|
@@ -148,7 +148,7 @@ http://localhost:3000
 
 ---
 
-## 🔄 API Endpoints
+##  API Endpoints
 
 ```
 POST   /api/auth/signup         Register new user
@@ -173,7 +173,7 @@ DELETE /api/playlists/:id       Delete playlist
 
 ---
 
-## 🧩 Tech Stack Explained
+##  Tech Stack Explained
 
 | Tech | Purpose |
 |------|---------|
@@ -189,7 +189,7 @@ DELETE /api/playlists/:id       Delete playlist
 
 ---
 
-## 🎨 How AngularJS Form Validation Works
+##  How AngularJS Form Validation Works
 
 The login and signup pages use AngularJS (bootstrapped on a div, not the whole app — React owns the page).
 
@@ -208,7 +208,7 @@ After AngularJS validates and submits via `$.ajax()`, it dispatches a custom DOM
 
 ---
 
-## 🐛 Troubleshooting
+##  Troubleshooting
 
 **CORS error?** Make sure both servers are running (port 3000 + 5000).
 
