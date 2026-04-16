@@ -1,0 +1,13 @@
+{
+  "name": "spotify-clone",
+  "version": "1.0.0",
+  "description": "Spotify Clone - MERN Stack",
+  "scripts": {
+    "install:server": "cd server && npm install",
+    "install:client": "cd client && npm install",
+    "install:all": "npm run install:server && npm run install:client",
+    "server": "cd server && npm run dev",
+    "client": "cd client && npm start",
+    "seed": "cd server && node seed.js"
+  }
+}

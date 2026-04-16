@@ -1,0 +1,10 @@
+@echo off
+
+echo Starting Backend...
+start cmd /k "cd /d C:\Users\shrey\OneDrive\Desktop\spotify-clone-final\spotify-clone\server && npm start"
+
+echo Starting Frontend...
+start cmd /k "cd /d C:\Users\shrey\OneDrive\Desktop\spotify-clone-final\spotify-clone\client && npm start"
+
+echo Done!
+pause
