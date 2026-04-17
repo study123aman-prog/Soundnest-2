@@ -1,7 +1,6 @@
-// =============================================
+
 // server/models/Comment.js - Comment & Rating Schema
-// NEW FILE - add to server/models/
-// =============================================
+
 
 const mongoose = require('mongoose');
 
