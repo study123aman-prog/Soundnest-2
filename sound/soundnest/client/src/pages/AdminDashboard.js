@@ -1,7 +1,7 @@
-// =============================================
+
 // client/src/pages/AdminDashboard.js
 // MODIFIED: added Ban/Suspend users + Analytics tab
-// =============================================
+
 
 import React, { useState, useEffect } from 'react';
 import Navbar from '../components/Navbar';
@@ -160,7 +160,6 @@ const AdminDashboard = () => {
         <Sidebar onTabChange={setActiveTab} />
         <div className="page-content">
 
-          {/* Header */}
           <div className="d-flex align-items-center gap-3 mb-4">
             <div style={{ width: 64, height: 64, background: 'linear-gradient(135deg, #e74c3c, #c0392b)', borderRadius: 8, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '2rem' }}>👑</div>
             <div>
@@ -169,7 +168,6 @@ const AdminDashboard = () => {
             </div>
           </div>
 
-          {/* Quick stats */}
           <div className="row g-3 mb-4">
             {[
               { label: 'Total Songs',  value: songs.length,                               icon: 'music-note-list', color: '#1DB954' },
