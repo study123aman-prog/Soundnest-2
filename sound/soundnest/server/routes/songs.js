@@ -1,7 +1,3 @@
-// =============================================
-// server/routes/songs.js - Song Routes
-// MODIFIED: added PATCH /:id for editing song details
-// =============================================
 
 const express = require('express');
 const router = express.Router();
