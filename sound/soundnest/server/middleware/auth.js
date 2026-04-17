@@ -1,7 +1,6 @@
 // =============================================
 // server/middleware/auth.js - Auth Middleware
-// MODIFIED: now also blocks banned/suspended users on login
-// =============================================
+
 
 const User = require('../models/User');
 
@@ -28,7 +27,7 @@ const requireRole = (...roles) => {
 };
 
 // NEW Middleware: Check ban/suspension status on each request
-// Use this on sensitive routes or apply globally in index.js
+
 const checkBanStatus = async (req, res, next) => {
   if (!req.session || !req.session.user) return next(); // Not logged in, skip
   try {
