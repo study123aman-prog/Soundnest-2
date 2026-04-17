@@ -135,22 +135,7 @@ router.get('/analytics', requireRole('admin'), async (req, res) => {
     res.status(500).json({ message: 'Error fetching analytics' });
   }
 });
-// PATCH /api/users/upgrade-to-premium
-// router.patch('/upgrade-to-premium', async (req, res) => {
-  //   router.patch('/upgrade-to-premium', requireRole('user'), async (req, res) => {
-  //   try {
-  //     if (!req.user) return res.status(401).json({ message: 'Not logged in' });
-  //     const user = await User.findById(req.user._id);
-  //     if (!user) return res.status(404).json({ message: 'User not found' });
-  //     if (user.role === 'premium') return res.status(400).json({ message: 'Already premium' });
 
-  //     user.role = 'premium';
-  //     await user.save();
-  //     res.json({ message: 'Upgraded to premium!', user });
-  //   } catch (err) {
-  //     res.status(500).json({ message: 'Upgrade failed' });
-  //   }
-  // });
   router.patch('/upgrade-to-premium', async (req, res) => {
   try {
     if (!req.session || !req.session.user) 
