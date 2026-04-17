@@ -1,7 +1,3 @@
-// =============================================
-// server/index.js - Main Express Server Entry
-// MODIFIED: added comments route + checkBanStatus middleware
-// =============================================
 
 const express = require('express');
 const mongoose = require('mongoose');
@@ -19,7 +15,6 @@ mongoose.connect(MONGO_URI)
   .then(() => console.log('✅ MongoDB Connected'))
   .catch(err => console.error('❌ MongoDB Error:', err));
 
-// ---- Middleware ----
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -39,21 +34,20 @@ app.use(session({
   }
 }));
 
-// Serve uploaded files as static
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
-// NEW: Apply ban/suspension check to all API routes
+//  Apply ban/suspension check to all API routes
 const { checkBanStatus } = require('./middleware/auth');
 app.use('/api', checkBanStatus);
 
-// ---- Routes ----
+//Routes
 app.use('/api/auth',      require('./routes/auth'));
 app.use('/api/songs',     require('./routes/songs'));
 app.use('/api/users',     require('./routes/users'));
 app.use('/api/playlists', require('./routes/playlists'));
 app.use('/api/comments',  require('./routes/comments')); // NEW
 
-// ---- Default Route ----
+// Default Route 
 app.get('/', (req, res) => {
   res.json({ message: 'Spotify Clone API is running 🎵' });
 });
